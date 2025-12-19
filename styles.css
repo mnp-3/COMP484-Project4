@@ -1,0 +1,83 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+} 
+
+#container {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  background: #cccccc;
+}
+
+#panel {
+  width: 25%;
+  font-size: 25px;
+  font-weight: bold;
+  padding: 15px;
+  background: #ff0000;
+  display: flex;
+  flex-direction: column; 
+  background-image: url("./assets/background.png");
+  background-size:contain;
+  background-position: center 80%;
+  background-repeat: no-repeat;
+  animation: panelFadeIn 0.6s ease-out;
+}
+
+#title {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#map {
+  margin: 0 auto;
+  width: 65%;
+  height: 100%;
+}
+
+button {
+  padding: 12px 20px;
+  background: #292929;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+button:hover {
+  background: white;
+  color: black;
+}
+
+.game-over {
+  animation: slideUpFade 1s ease-out;
+  color: #ffee00;
+}
+
+/*------- Animations -------*/
+@keyframes panelFadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUpFade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
